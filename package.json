@@ -6,7 +6,8 @@
     "start": "node index.js",
     "watch": "supervisor index.js",
     "lint": "standard",
-    "add-to-systemd": "./scripts/add_to_systemd"
+    "add-to-systemd": "./scripts/add_to_systemd",
+    "update-toc": "doctoc README.md"
   },
   "author": "maxlath",
   "license": "MIT",
@@ -21,6 +22,7 @@
     "rss": "^1.2.2"
   },
   "devDependencies": {
+    "doctoc": "^1.2.0",
     "git-hooks": "^1.1.8",
     "standard": "^8.6.0",
     "supervisor": "^0.12.0"
