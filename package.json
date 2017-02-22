@@ -5,12 +5,14 @@
   "scripts": {
     "start": "node index.js",
     "watch": "supervisor index.js",
-    "lint": "standard"
+    "lint": "standard",
+    "add-to-systemd": "./scripts/add_to_systemd"
   },
   "author": "maxlath",
   "license": "MIT",
   "description": "generate a RSS feed from a WikiChat page ",
   "dependencies": {
+    "add-to-systemd": "^1.2.0",
     "cheerio": "^0.22.0",
     "express": "^4.14.1",
     "got": "^6.7.1",
