@@ -6,6 +6,8 @@ const getTocElements = require('./lib/get_toc_elements')
 const serializeElements = require('./lib/serialize_elements')
 const { log } = require('./lib/utils')
 
+app.use(require('morgan')('dev'))
+
 app.get('/', function (req, res) {
   log('query', req.query)
   const { feed } = req.query

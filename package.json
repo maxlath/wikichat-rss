@@ -17,6 +17,7 @@
     "config": "^1.25.1",
     "express": "^4.14.1",
     "got": "^6.7.1",
+    "morgan": "^1.8.1",
     "rss": "^1.2.2"
   },
   "devDependencies": {
