@@ -1,27 +1,10 @@
+const app = require('express')()
 const getTocElements = require('./lib/get_toc_elements')
 const serializeElements = require('./lib/serialize_elements')
-const { green } = require('chalk')
-const log = (label, obj) => {
-  const args = [ green(label) ]
-  if (obj) args.push(obj)
-  console.log.apply(null, args)
-}
-
+const { log } = require('utils')
 const pkg = require('./package.json')
 const port = 5432
-
-const feeds = {
-  'project-chat': {
-    title: 'Wikidata Project chat',
-    site_url: 'https://www.wikidata.org/wiki/Wikidata:Project_chat'
-  },
-  'books-project': {
-    title: 'Books WikiProject',
-    site_url: 'https://www.wikidata.org/wiki/Wikidata_talk:WikiProject_Books'
-  }
-}
-
-const app = require('express')()
+const feeds = require('./feeds')
 
 app.get('/', function (req, res) {
   log('query', req.query)
