@@ -1,4 +1,7 @@
 module.exports = {
   port: 5432,
-  ttl: 12 * 60 * 1000
+  caching: {
+    enabled: false,
+    ttl: 12 * 60 * 1000
+  }
 }
