@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node index.js",
     "watch": "supervisor index.js",
+    "postinstall": "mkdir -p cache",
     "lint": "standard",
     "add-to-systemd": "./scripts/add_to_systemd",
     "update-toc": "doctoc README.md"
