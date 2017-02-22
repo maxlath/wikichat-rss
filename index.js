@@ -1,10 +1,10 @@
 const app = require('express')()
+const { port } = require('config')
+const pkg = require('./package.json')
+const feeds = require('./feeds')
 const getTocElements = require('./lib/get_toc_elements')
 const serializeElements = require('./lib/serialize_elements')
-const { log } = require('utils')
-const pkg = require('./package.json')
-const port = 5432
-const feeds = require('./feeds')
+const { log } = require('./lib/utils')
 
 app.get('/', function (req, res) {
   log('query', req.query)
